@@ -49,8 +49,7 @@ VM images needed to run OST
 %configure
 
 %install
-%make_install
-
+make -d install DESTDIR=%{?buildroot} INSTALL="%{__install} -p"
 
 %if %{with_base}
 
