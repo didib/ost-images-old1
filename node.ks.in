@@ -14,7 +14,7 @@ bootloader --timeout=1 --append="crashkernel=auto consoleblank=0 net.ifnames=0 c
 
 liveimg --url=file:///run/install/repo/ovirt-node-ng-image.squashfs.img
 
-%post --erroronfail
+%post
 set -x
 imgbase --debug layout --init  >> /var/log/imgbased.log 2>&1
 
