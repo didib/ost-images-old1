@@ -26,7 +26,7 @@
 	chmod 666 $@.tmp
 	virt-install \
 		--name $(@:.qcow2=) \
-		--memory 6144 \
+		--memory 3072 \
 		--vcpus 2 \
 		--disk path=$@.tmp \
 		--location=$(_LOCATION) \
